@@ -39,7 +39,7 @@ with project("SandboxNKNetwork"): // NOM DU PROJET
     ]
     if _WANT_MBEDTLS:
         _LINKS.append("NKMbedTLS")
-    _LINKS += [            // LISTE DES DEPENDANCES
+    _LINKS += [            // LISTE DES DEPENDANCES DU PROJET
         "NKTime",  
         "NKFileSystem",
         "NKStream",
@@ -55,46 +55,46 @@ with project("SandboxNKNetwork"): // NOM DU PROJET
     links(_LINKS)
     dependson(_LINKS)
 
-    objdir("%{wks.location}/Build/Obj/%{cfg.buildcfg}-%{cfg.system}/%{prj.name}")
-    targetdir("%{wks.location}/Build/Bin/%{cfg.buildcfg}-%{cfg.system}/%{prj.name}")
+    objdir("%{wks.location}/Build/Obj/%{cfg.buildcfg}-%{cfg.system}/%{prj.name}") ??
+    targetdir("%{wks.location}/Build/Bin/%{cfg.buildcfg}-%{cfg.system}/%{prj.name}") ??
 
-    with filter("system:Windows && options:windows-runtime=uwp"):  // FILTRE
+    with filter("system:Windows && options:windows-runtime=uwp"):  # ?
         objdir("%{wks.location}/Build/Obj/%{cfg.buildcfg}-%{cfg.system}-uwp/%{prj.name}") ?
         targetdir("%{wks.location}/Build/Bin/%{cfg.buildcfg}-%{cfg.system}-uwp/%{prj.name}") ?
 
-    with filter("system:Windows && !options:windows-runtime=uwp && !system:XboxSeries && !system:XboxOne"):  // FILTRE
-        usetoolchain(TC_WINDOWS)
-        links(["user32", "shell32", "ws2_32"])
-        if _WANT_MBEDTLS:
+    with filter("system:Windows && !options:windows-runtime=uwp && !system:XboxSeries && !system:XboxOne"): # ???
+        usetoolchain(TC_WINDOWS) ???
+        links(["user32", "shell32", "ws2_32"]) ???
+        if _WANT_MBEDTLS: ???
             links(["bcrypt"])  # mbedTLS entropy (BCryptGenRandom) ?
 
-    with filter("system:UWP || system:Windows && options:windows-runtime=uwp"):  // FILTRE
+    with filter("system:UWP || system:Windows && options:windows-runtime=uwp"):  # ???
         usetoolchain("xbox-clang")
  
-    with filter("system:Linux"):  // FILTRE
+    with filter("system:Linux"):  # FILTRE pour le système linux
         usetoolchain("clang-native")
         links(["pthread"])
 
-    with filter("system:macOS"):   // FILTRE
+    with filter("system:macOS"):   # FILTRE système mac os 
         usetoolchain("clang-native")
         links(["pthread"])
 
-    with filter("system:Android"):  // FILTRE
+    with filter("system:Android"):  # FILTRE système android
         usetoolchain("android-ndk")
         links(["log"])
 
-    with filter("system:Web"):   // FILTRE
+    with filter("system:Web"):   # FILTRE pour le web
         usetoolchain("emscripten")
 
-    with filter("system:XboxSeries || system:XboxOne"): // // FILTRE
+    with filter("system:XboxSeries || system:XboxOne"): # FILTRE pour xbox
         usetoolchain("xbox-clang")
 
-    with filter("config:Debug"):   // FILTRE
+    with filter("config:Debug"):   # ???
         defines(["_DEBUG", "DEBUG", "NKENTSEU_DEBUG"])
         optimize("Off")
         symbols(True)
 
-    with filter("config:Release"):   // FILTRE
+    with filter("config:Release"):   # ???
         defines(["NDEBUG"])
         optimize("Speed")
         symbols(False)
