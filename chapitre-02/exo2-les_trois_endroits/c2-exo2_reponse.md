@@ -29,7 +29,7 @@ nothing to commit, working tree clean
 
 ```
 `conclusion`
-**`le git status après modification` ici le fichier se met en rouge pour dire que git à detecter les modifications mais cela n'est pas encore dans l'index tandis que `git status après git add` ici le fichier est vert et spécifie que les modifications sont dejà pousser dans le transit(index)  alors que `git status après git commit` ici le fichier est enregistré localement et une modification est en attente**
+**le git status après modification** ici le fichier se met en rouge pour dire que git à detecter les modifications mais cela n'est pas encore dans l'index tandis que **git status après git add** ici le fichier est vert et spécifie que les modifications sont pret a etre enregistrré  dans le prochain commit  alors que `git status après git commit` ici le fichier est enregistré localement  et il y a plus de modification en attente
 
 ## autre sortie
 
