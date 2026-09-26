@@ -66,14 +66,15 @@ ce programme  compte 24 lignes de code donc 2 lignes pour les includes l'autre p
 `while (NkEvent* ev = NkEvents().PollEvent()) `: boucle qui consiste à stocké les eventuels evènements
 `  if (ev->Is<NkWindowCloseEvent>())`: condition lorsque l'on clique sur la croix de la fenetre
 ` window.Close();`: fermeture de la fenetre
+`  if (ev->Is<NkWindowCloseEvent>()) 
+                window.Close();` qui sont des lignes de code qui permette de spécifier l'evenement pour fermer proprement la fenetre sans oublié aussi notre ami le namespace nkentseu qui est venu ici nous permettre d'utiliser les classes et les types 
 
 
 `return 0`: sortie du programme
 
 ## 3. conclusion
 
-le programme fenetre à nue ouvre effectivement une fenetre mais cette fenetre n'est pas doté des evènements notamment celle pour faire le programme. ici la seul façon par exemple de fermé un programme est soit `ctrl+c` soit lorsque tu veux ferme le programme tu clique sur `ferme programme`
-
+la fenetre j'ai codé dans la fenetre si haut diffère de celle du chapitre dans la mesure que tu peux fermer proprement la fenetre avec sa croix ce qui est différent avec celle du chapitre qui n'est pas fermé proprement et cette  difference est du à: 
 
 
 
