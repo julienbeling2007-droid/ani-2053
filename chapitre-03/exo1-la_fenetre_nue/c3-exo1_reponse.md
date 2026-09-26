@@ -22,13 +22,21 @@ int nkmain(const NkEntryState &state){
         logger.Error("[app] creation fenetre echouee");
         return -1;
     }
-     while (window.IsOpen()) { /* les evenements arrivent ici */ }
+     while (window.IsOpen()) { 
+        while (window.IsOpen()) { 
+        while (NkEvent* ev = NkEvents().PollEvent()) {
+            if (ev->Is<NkWindowCloseEvent>()) {
+                window.Close();
+            }
+      }
+    }
+      }
     return 0;
 }
 ```
 ## 2. explication du code 
 
-ce programme  compte 19 lignes de code donc 2 lignes pour les includes l'autre pour le namespace et le reste pour le programme proprement dit
+ce programme  compte 24 lignes de code donc 2 lignes pour les includes l'autre pour le namespace et le reste pour le programme proprement dit
 
 ` #include "NKWindow/NKWindow.h` : permet d'inclure les fichiers d'entetes de Nkwindow
 
@@ -55,6 +63,10 @@ ce programme  compte 19 lignes de code donc 2 lignes pour les includes l'autre p
 `return -1`: valeur retourner en cas d'echec
 
 `while (window.IsOpen())`: boucle lorsque la fenetre est ouverte
+`while (NkEvent* ev = NkEvents().PollEvent()) `: boucle qui consiste à stocké les eventuels evènements
+`  if (ev->Is<NkWindowCloseEvent>())`: condition lorsque l'on clique sur la croix de la fenetre
+` window.Close();`: fermeture de la fenetre
+
 
 `return 0`: sortie du programme
 

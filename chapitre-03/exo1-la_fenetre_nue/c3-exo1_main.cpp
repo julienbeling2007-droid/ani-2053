@@ -17,6 +17,14 @@ int nkmain(const NkEntryState &state){
         logger.Error("[app] creation fenetre echouee");
         return -1;
     }
-     while (window.IsOpen()) { /* les evenements arrivent ici */ }
+     while (window.IsOpen()) { 
+        while (window.IsOpen()) { 
+        while (NkEvent* ev = NkEvents().PollEvent()) {
+            if (ev->Is<NkWindowCloseEvent>()) {
+                window.Close();
+            }
+      }
+    }
+     }
     return 0;
 }
