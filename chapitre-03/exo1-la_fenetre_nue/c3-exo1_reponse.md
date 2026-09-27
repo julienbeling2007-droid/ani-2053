@@ -23,20 +23,19 @@ int nkmain(const NkEntryState &state){
         return -1;
     }
      while (window.IsOpen()) { 
-        while (window.IsOpen()) { 
         while (NkEvent* ev = NkEvents().PollEvent()) {
             if (ev->Is<NkWindowCloseEvent>()) {
                 window.Close();
             }
       }
     }
-      }
+      
     return 0;
 }
 ```
 ## 2. explication du code 
 
-ce programme  compte 24 lignes de code donc 2 lignes pour les includes l'autre pour le namespace et le reste pour le programme proprement dit
+ce programme  compte 22 lignes de code donc 2 lignes pour les includes l'autre pour le namespace et le reste pour le programme proprement dit
 
 ` #include "NKWindow/NKWindow.h` : permet d'inclure les fichiers d'entetes de Nkwindow
 
