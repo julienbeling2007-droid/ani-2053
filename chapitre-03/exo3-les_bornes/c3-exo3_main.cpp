@@ -10,6 +10,8 @@ int nkmain(const NkEntryState &state){
     cfg.title= "première fenetre";
     cfg.width=1000;
     cfg.height= 720;
+    cfg.minWidth=150;
+    cfg.minHeight=150;
     
     // LES DIFFERENTS DROITS
     cfg.frame= true;
@@ -18,9 +20,13 @@ int nkmain(const NkEntryState &state){
     cfg.movable=true;
     cfg.closable=true;
     cfg.maximizable=true;
-    cfg.canFullscreen=true;
+    cfg.canFullscreen=false;
 
     NkWindow window(cfg);
+    math::NkVec2u sz = window.GetSize();
+
+    std::cout<< sz.width <<std::endl;
+    std::cout << sz.height <<std::endl;
     
     if (!window.IsOpen()) {
         logger.Error("[app] creation fenetre echouee");
@@ -30,6 +36,11 @@ int nkmain(const NkEntryState &state){
         while (NkEvent* ev = NkEvents().PollEvent()) {
             if (ev->Is<NkWindowCloseEvent>()) {
                 window.Close();
+            }
+            if(auto* vz= ev->As<NkWindowResizeEvent>()){
+                math::NkVec2u sz=window.GetSize();
+
+                std::cout<< "nouvelle taille:" << sz.width <<" ,"<<sz.height<<"."<<std::endl;
             }
       }
     }
