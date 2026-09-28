@@ -66,7 +66,7 @@ l'exercice 3 il nous a été demandé de mettre une taille minimum que la fenetr
 ### 3. taille minimale
 
 dans le code suivant j'ai fixé la taille minimal à 150 pour la hauteur ainsi que la longueur . mais en redimensionnant je me suis rendu compte que la taille minimal de la fenetre après avoir reduit est de 
-`134` en longueur et `111` en largeur
+`134` en longueur et `111` en largeur qui juste une marge moyenne
 
 ### 4. preuve ecrite
 
@@ -420,3 +420,315 @@ nouvelle taille:134 ,111.
 nouvelle taille:134 ,111.
 
 ```
+
+### test2 sans les minwidth et minheight
+
+```
+╔══════════════════════════════════════════════════════════════════╗
+║                                                                  ║
+║                ██╗███████╗███╗   ██╗ ██████╗  █████╗             ║
+║                ██║██╔════╝████╗  ██║██╔════╝ ██╔══██╗            ║
+║                ██║█████╗  ██╔██╗ ██║██║  ███╗███████║            ║
+║           ██   ██║██╔══╝  ██║╚██╗██║██║   ██║██╔══██║            ║
+║           ╚█████╔╝███████╗██║ ╚████║╚██████╔╝██║  ██║            ║
+║            ╚════╝ ╚══════╝╚═╝  ╚═══╝ ╚═════╝ ╚═╝  ╚═╝            ║
+║                                                                  ║
+║             Multi-platform C/C++ Build System v2.8.0             ║
+║                                                                  ║
+╚══════════════════════════════════════════════════════════════════╝
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  ▶  EXECUTION  —  window.exe
+     C:\projetWindow\firstwindow\Build\Bin\Debug-Windows\window\window.exe
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1000
+720
+nouvelle taille:1000 ,720.
+nouvelle taille:144 ,720.
+nouvelle taille:144 ,720.
+nouvelle taille:144 ,720.
+nouvelle taille:144 ,720.
+nouvelle taille:144 ,720.
+nouvelle taille:144 ,720.
+nouvelle taille:144 ,720.
+nouvelle taille:144 ,720.
+nouvelle taille:144 ,720.
+nouvelle taille:144 ,720.
+nouvelle taille:144 ,720.
+nouvelle taille:144 ,720.
+nouvelle taille:144 ,720.
+nouvelle taille:144 ,720.
+nouvelle taille:144 ,720.
+nouvelle taille:144 ,720.
+nouvelle taille:144 ,720.
+nouvelle taille:144 ,720.
+nouvelle taille:144 ,720.
+nouvelle taille:144 ,720.
+nouvelle taille:144 ,720.
+nouvelle taille:144 ,720.
+nouvelle taille:144 ,720.
+nouvelle taille:144 ,720.
+nouvelle taille:144 ,720.
+nouvelle taille:144 ,720.
+nouvelle taille:144 ,720.
+nouvelle taille:144 ,720.
+nouvelle taille:144 ,720.
+nouvelle taille:144 ,720.
+nouvelle taille:144 ,720.
+nouvelle taille:144 ,720.
+nouvelle taille:144 ,720.
+nouvelle taille:144 ,720.
+nouvelle taille:144 ,720.
+nouvelle taille:144 ,720.
+nouvelle taille:144 ,720.
+nouvelle taille:144 ,720.
+nouvelle taille:144 ,720.
+nouvelle taille:144 ,720.
+nouvelle taille:144 ,720.
+nouvelle taille:144 ,720.
+nouvelle taille:144 ,720.
+nouvelle taille:144 ,720.
+nouvelle taille:144 ,720.
+nouvelle taille:144 ,720.
+nouvelle taille:144 ,720.
+nouvelle taille:144 ,720.
+nouvelle taille:144 ,720.
+nouvelle taille:144 ,720.
+nouvelle taille:144 ,720.
+nouvelle taille:144 ,720.
+nouvelle taille:144 ,720.
+nouvelle taille:144 ,720.
+nouvelle taille:144 ,720.
+nouvelle taille:144 ,720.
+nouvelle taille:144 ,720.
+nouvelle taille:144 ,720.
+nouvelle taille:144 ,720.
+nouvelle taille:144 ,720.
+nouvelle taille:144 ,720.
+nouvelle taille:144 ,720.
+nouvelle taille:144 ,720.
+nouvelle taille:144 ,720.
+nouvelle taille:144 ,720.
+nouvelle taille:144 ,720.
+nouvelle taille:144 ,720.
+nouvelle taille:144 ,720.
+nouvelle taille:144 ,720.
+nouvelle taille:144 ,720.
+nouvelle taille:144 ,720.
+nouvelle taille:144 ,720.
+nouvelle taille:144 ,720.
+nouvelle taille:144 ,720.
+nouvelle taille:144 ,720.
+nouvelle taille:144 ,720.
+nouvelle taille:144 ,720.
+nouvelle taille:144 ,720.
+nouvelle taille:144 ,720.
+nouvelle taille:144 ,720.
+nouvelle taille:144 ,720.
+nouvelle taille:144 ,720.
+nouvelle taille:144 ,720.
+nouvelle taille:144 ,720.
+nouvelle taille:144 ,720.
+nouvelle taille:144 ,720.
+nouvelle taille:144 ,720.
+nouvelle taille:144 ,720.
+nouvelle taille:144 ,720.
+nouvelle taille:144 ,720.
+nouvelle taille:144 ,720.
+nouvelle taille:144 ,720.
+nouvelle taille:144 ,720.
+nouvelle taille:144 ,720.
+nouvelle taille:144 ,720.
+nouvelle taille:144 ,720.
+nouvelle taille:144 ,720.
+nouvelle taille:144 ,720.
+nouvelle taille:144 ,720.
+nouvelle taille:144 ,720.
+nouvelle taille:144 ,720.
+nouvelle taille:144 ,720.
+nouvelle taille:144 ,720.
+nouvelle taille:144 ,720.
+nouvelle taille:144 ,720.
+nouvelle taille:144 ,720.
+nouvelle taille:144 ,720.
+nouvelle taille:144 ,720.
+nouvelle taille:144 ,720.
+nouvelle taille:144 ,720.
+nouvelle taille:144 ,720.
+nouvelle taille:144 ,720.
+nouvelle taille:144 ,720.
+nouvelle taille:144 ,720.
+nouvelle taille:144 ,720.
+nouvelle taille:144 ,720.
+nouvelle taille:144 ,720.
+nouvelle taille:144 ,720.
+nouvelle taille:144 ,720.
+nouvelle taille:144 ,720.
+nouvelle taille:144 ,720.
+nouvelle taille:144 ,720.
+nouvelle taille:144 ,720.
+nouvelle taille:144 ,720.
+nouvelle taille:144 ,720.
+nouvelle taille:144 ,720.
+nouvelle taille:144 ,720.
+nouvelle taille:144 ,720.
+nouvelle taille:144 ,720.
+nouvelle taille:144 ,720.
+nouvelle taille:144 ,720.
+nouvelle taille:144 ,720.
+nouvelle taille:144 ,720.
+nouvelle taille:144 ,720.
+nouvelle taille:144 ,720.
+nouvelle taille:144 ,720.
+nouvelle taille:144 ,720.
+nouvelle taille:144 ,720.
+nouvelle taille:144 ,720.
+nouvelle taille:144 ,720.
+nouvelle taille:144 ,720.
+nouvelle taille:144 ,720.
+nouvelle taille:144 ,720.
+nouvelle taille:144 ,720.
+nouvelle taille:144 ,720.
+nouvelle taille:144 ,720.
+nouvelle taille:144 ,720.
+nouvelle taille:144 ,720.
+nouvelle taille:144 ,720.
+nouvelle taille:144 ,720.
+nouvelle taille:144 ,720.
+nouvelle taille:144 ,720.
+nouvelle taille:144 ,720.
+nouvelle taille:144 ,720.
+nouvelle taille:144 ,720.
+nouvelle taille:144 ,720.
+nouvelle taille:144 ,720.
+nouvelle taille:144 ,720.
+nouvelle taille:144 ,720.
+nouvelle taille:144 ,720.
+nouvelle taille:144 ,720.
+nouvelle taille:144 ,720.
+nouvelle taille:144 ,720.
+nouvelle taille:144 ,720.
+nouvelle taille:144 ,720.
+nouvelle taille:144 ,720.
+nouvelle taille:144 ,51.
+nouvelle taille:144 ,51.
+nouvelle taille:144 ,51.
+nouvelle taille:144 ,51.
+nouvelle taille:144 ,51.
+nouvelle taille:144 ,51.
+nouvelle taille:144 ,51.
+nouvelle taille:144 ,51.
+nouvelle taille:144 ,51.
+nouvelle taille:144 ,51.
+nouvelle taille:144 ,51.
+nouvelle taille:144 ,51.
+nouvelle taille:144 ,51.
+nouvelle taille:144 ,51.
+nouvelle taille:144 ,51.
+nouvelle taille:144 ,51.
+nouvelle taille:144 ,51.
+nouvelle taille:144 ,51.
+nouvelle taille:144 ,51.
+nouvelle taille:144 ,51.
+nouvelle taille:144 ,51.
+nouvelle taille:144 ,51.
+nouvelle taille:144 ,51.
+nouvelle taille:144 ,51.
+nouvelle taille:144 ,51.
+nouvelle taille:144 ,51.
+nouvelle taille:144 ,51.
+nouvelle taille:144 ,51.
+nouvelle taille:144 ,51.
+nouvelle taille:144 ,51.
+nouvelle taille:144 ,51.
+nouvelle taille:144 ,51.
+nouvelle taille:144 ,51.
+nouvelle taille:144 ,51.
+nouvelle taille:144 ,51.
+nouvelle taille:144 ,51.
+nouvelle taille:144 ,51.
+nouvelle taille:144 ,51.
+nouvelle taille:144 ,51.
+nouvelle taille:144 ,51.
+nouvelle taille:144 ,51.
+nouvelle taille:144 ,51.
+nouvelle taille:144 ,51.
+nouvelle taille:144 ,51.
+nouvelle taille:144 ,51.
+nouvelle taille:144 ,51.
+nouvelle taille:144 ,51.
+nouvelle taille:144 ,51.
+nouvelle taille:144 ,51.
+nouvelle taille:144 ,51.
+nouvelle taille:144 ,51.
+nouvelle taille:144 ,51.
+nouvelle taille:144 ,51.
+nouvelle taille:144 ,51.
+nouvelle taille:144 ,51.
+nouvelle taille:144 ,51.
+nouvelle taille:144 ,51.
+nouvelle taille:144 ,51.
+nouvelle taille:144 ,51.
+nouvelle taille:144 ,51.
+nouvelle taille:144 ,51.
+nouvelle taille:144 ,51.
+nouvelle taille:144 ,51.
+nouvelle taille:144 ,51.
+nouvelle taille:144 ,51.
+nouvelle taille:144 ,51.
+nouvelle taille:144 ,51.
+nouvelle taille:144 ,51.
+nouvelle taille:144 ,51.
+nouvelle taille:144 ,51.
+nouvelle taille:144 ,51.
+nouvelle taille:144 ,51.
+nouvelle taille:144 ,51.
+nouvelle taille:144 ,51.
+nouvelle taille:144 ,51.
+nouvelle taille:144 ,51.
+nouvelle taille:144 ,51.
+nouvelle taille:144 ,51.
+nouvelle taille:144 ,51.
+nouvelle taille:144 ,51.
+nouvelle taille:144 ,51.
+nouvelle taille:144 ,51.
+nouvelle taille:144 ,51.
+nouvelle taille:144 ,51.
+nouvelle taille:144 ,51.
+nouvelle taille:144 ,51.
+nouvelle taille:144 ,51.
+nouvelle taille:144 ,51.
+nouvelle taille:144 ,51.
+nouvelle taille:144 ,51.
+nouvelle taille:144 ,51.
+nouvelle taille:144 ,51.
+nouvelle taille:144 ,51.
+nouvelle taille:144 ,51.
+nouvelle taille:144 ,51.
+nouvelle taille:144 ,51.
+nouvelle taille:144 ,51.
+nouvelle taille:144 ,51.
+nouvelle taille:144 ,51.
+nouvelle taille:144 ,51.
+nouvelle taille:144 ,51.
+nouvelle taille:144 ,51.
+nouvelle taille:144 ,51.
+nouvelle taille:144 ,51.
+nouvelle taille:144 ,51.
+nouvelle taille:144 ,51.
+nouvelle taille:144 ,51.
+nouvelle taille:144 ,51.
+nouvelle taille:144 ,51.
+nouvelle taille:144 ,51.
+nouvelle taille:144 ,51.
+nouvelle taille:144 ,51.
+nouvelle taille:144 ,51.
+nouvelle taille:144 ,51.
+nouvelle taille:144 ,51.
+nouvelle taille:144 ,51.
+nouvelle taille:144 ,51.
+```
+
+ici la taille minimum de la fenetre sans les limites est à `144` en longueur et `51` en largeur .
