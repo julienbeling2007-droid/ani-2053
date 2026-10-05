@@ -1,0 +1,7 @@
+la coquille nous simplifie la tache en gerant boucle des  evenements(fermeture avec la croix), 
+la construction de la fenetre , renderer et horloge
+
+et quand tu configures la fenetre dans OnInit() la fenetre ne gère pas les dimensions et les caractéristiques que tu as l'a attribué, 
+la fenetre s'affiche avec les caractéristiques par defaut.
+
+sans le Nkmain.h pas de point d'entrée du programme et des problèmes dans l'edition de liens va survenir
