@@ -13,7 +13,9 @@ int main(){
     for(int i=0; i<=n; i++){
         std::string nom, octets;
         int taille;
-        std::cin>> nom>> octets>>taille;
+        std::cin>> nom;
+        std::cin>> octets;
+        std::cin>>taille;
         int position=nom.find_last_of('.');// recupère la position du dernier . du caractère
         std::string extension="";
         if(position!=std::string::npos){
@@ -26,7 +28,7 @@ int main(){
         else{
             lus++;
 
-            std::string format;
+            std::string format="inconnu";
             if(octets.find("89504E47")==0){
                 format="PNG";
             }
@@ -36,9 +38,13 @@ int main(){
             else if(octets.find("<svg")==0){
                 format="SVG";
             }
-            if((format=="PNG" && extension=="png")||(format=="JPEG" && extension=="jpg")||(format=="SVG" && extension=="svg")){
+            if(format=="inconnu"){
+                std::cout << nom << "refusé"<<std::endl;
+                refusé++;
+            }
+            else if((format=="PNG" && extension=="png")||(format=="JPEG" && extension=="jpg")||(format=="SVG" && extension=="svg")){
 
-                std::cout<<nom <<" " << format << "ok"<< std::endl;
+                std::cout<<nom <<" " << format << "ok "<<std::endl;
             }
             else{
                 std::cout<< nom << " " << format << "MENT"<<std::endl;
@@ -55,5 +61,5 @@ int main(){
     std::cout<< "MENSONGE" <<mensonge<<std::endl;
     std::cout<< "REFUSES" <<refusé<<std::endl;
 
-
+    return 0;
 }
