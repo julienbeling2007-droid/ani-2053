@@ -42,7 +42,7 @@ int main(){
                 std::cout << nom << "refusé"<<std::endl;
                 refusé++;
             }
-            else if((format=="PNG" && extension=="png")||(format=="JPEG" && extension=="jpg")||(format=="SVG" && extension=="svg")){
+            else if((format=="PNG" && extension=="png"&& taille>=8)||(format=="JPEG" && extension=="jpg")||(format=="SVG" && extension=="svg")){
 
                 std::cout<<nom <<" " << format << "ok "<<std::endl;
             }
