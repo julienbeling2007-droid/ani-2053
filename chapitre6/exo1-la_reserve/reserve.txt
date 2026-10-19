@@ -1,0 +1,7 @@
+tache: faire le cumule des nombres de 1 à 1000
+reserves: temps ecoule :  277.405   Ouvriers : 8
+fils:temps ecoule :  435.967  Ouvriers : 200
+
+tache longue faire le cumul des nombres de 1 à 10000000 pour augmenter le travail de chaque thread
+reserves:  273.017  Ouvriers : 8
+fils: 301.997  Ouvriers : 200
