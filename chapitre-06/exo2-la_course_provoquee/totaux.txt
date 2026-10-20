@@ -1,0 +1,23 @@
+avec 8 fils:
+total1: Valeur du compteur attendue : 8000000  valeur obtenue : 1349633
+total2: Valeur du compteur attendue : 8000000  valeur obtenue : 1391628
+total3: Valeur du compteur attendue : 8000000  valeur obtenue : 1346054
+total4: Valeur du compteur attendue : 8000000  valeur obtenue : 1442324
+total5: Valeur du compteur attendue : 8000000  valeur obtenue : 1401936
+total6: Valeur du compteur attendue : 8000000  valeur obtenue : 1913878 
+total7: Valeur du compteur attendue : 8000000  valeur obtenue : 1668167
+total8: Valeur du compteur attendue : 8000000  valeur obtenue : 1685401
+total9: Valeur du compteur attendue : 8000000  valeur obtenue : 1713002
+total10:Valeur du compteur attendue : 8000000  valeur obtenue : 1998582
+
+avec un fils:
+total: la valeur attendue:1000000 valeur obtenu: 1000000
+
+
+release:Valeur du compteur attendue : 8000000  valeur obtenue : 1572133(8 fils)
+la valeur attendue:1000000 valeur obtenu: 1000000(1 fils)
+
+
+quand 2 fils executent une meme tache sur une meme donnée ce qui se passe c'est que 
+le système d'exploitation attribue la prise en main du programme à tour de role et 
+non pas le premier arrivée du coup cela crée un desordre à un certains niveaux n'aboutissant pas au resultat attendu à la sorti du programme
