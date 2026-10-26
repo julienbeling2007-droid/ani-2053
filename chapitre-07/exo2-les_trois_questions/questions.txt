@@ -1,0 +1,10 @@
+nom du fichier: include/NKCanvas/Renderer/Core/NkTransformable.h
+
+ce qu'il possède: ce qui est de l'etat: mposition(position de l'objet), mrotation(Angle de rotation en radians, autour de mOrigin), mscale(Facteurs d’échelle en x et y, autour de mOrigin), morigin(Pivot local, autour duquel se font la rotation et l’échelle)
+ce qui n'est de l'etat: mcachedtransform, mcachedinverse, mdirty, minversedirty. il n
+
+ce qu'il appelle:NKCanvas\Renderer\Resources\NkSprite.h, NKCanvas\Renderer\Shapes\NkShape.h:
+
+ce qu'il promet: permet de representer l'objet à une position, fixe l'axe et de rotation et permet une rotation,fixe les facteurs d'echelle autour de origin,fixe le pivot(origine utiliser par la rotation et le scale)
+, en gros il fournt la transformation de l'objet dessiner pas de dessiner l'objet
+ce que je n'ai pas lu:  les corps des methodes pour comprendre leur fonctionnement
