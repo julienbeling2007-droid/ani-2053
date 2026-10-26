@@ -1,0 +1,16 @@
+module: nkmath
+d'après le projet: les dependances sont:"NKMath": ['NKContainers', 'NKCore', 'NKMemory', 'NKPlatform'],
+ce qu'il fait: Il fournit les types primitifs , les macros, les asserts et les traits, qui remplacent ceux de la STL(NKCore)., la détection de l’OS, de l’architecture et du processeur. 
+Il aide le reste du code à s’adapter à Windows, Linux, macOS, Android, iOS, Web et HarmonyOS.(NKPlatform)
+gestion de la memoire(nkmemory), montre environ 40 conteneurs écrits maison (Vector, Map, Set, String…), qui remplacent ceux de la STL.(NKContainers)
+ce qu'elle ne fait pas: lire des images, dessiner par exemple, gerer des evènements, construire la fenetre, je joue pas de son, ecrire du texte, le reseau
+
+après l'entete(NKMath.h): chemin de l'entete:canvas/include/NKMath/NKMath.h.
+contenu: #include "NKMath/NkLegacySystem.h" // Types fondamentaux : float32, float64, etc.
+#include "NKMath/NkVec.h"           // Types vectoriels : NkVec2T, NkVec3T, NkVec4T
+#include "NKMath/NkAngle.h"           // Type NkAngle pour les rotations angulaires
+#include "NKMath/NkEulerAngle.h"   // Type NkEulerAngle pour les angles d'Euler
+#include "NKMath/NkFunctions.h"       ici on a faire au differents fonctions mathematiques du module NKMath
+
+MES erreurs: ici les dependances ne montrent pas que le module nkmath est capable de faire des calculs mathématiques orientés graphisme et qu'ils contient des vecteurs, matrices et quaternion
+
