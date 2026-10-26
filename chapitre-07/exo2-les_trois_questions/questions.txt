@@ -4,6 +4,7 @@ ce qu'il possède: ce qui est de l'etat: mposition(position de l'objet), mrotati
 ce qui n'est de l'etat: mcachedtransform, mcachedinverse, mdirty, minversedirty. il n
 
 ce qu'il appelle:NKCanvas\Renderer\Resources\NkSprite.h, NKCanvas\Renderer\Shapes\NkShape.h:
+commande utilisés: Get-ChildItem -Recurse -Include *.h *.cpp | Select-String "NkTransformable"
 
 ce qu'il promet: permet de representer l'objet à une position, fixe l'axe et de rotation et permet une rotation,fixe les facteurs d'echelle autour de origin,fixe le pivot(origine utiliser par la rotation et le scale)
 , en gros il fournt la transformation de l'objet dessiner pas de dessiner l'objet
