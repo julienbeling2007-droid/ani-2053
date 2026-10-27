@@ -1,0 +1,7 @@
+sauts : au niveau du main.cpp que j'ai écrit il y a l'appel de la fonction target.clear(couleur),après le premier saut  on se retrouve au niveau du fichier nkrenderer2d.h
+
+arret: ici le saut final est dans le fichier nkrenderer2d avec la definition de clear(), ici clear recouvre l'ecran en fonction de la couleur decidé en fonction de de l'existance d'un backend
+
+pouquoi là: en fait la fonction clear s'arrete à nkrenderer2d car c'est là où la fonction est declaré et defini
+
+ce je sais: je peux remonter la definition d'une fonction au moyen de ctrl+click 
