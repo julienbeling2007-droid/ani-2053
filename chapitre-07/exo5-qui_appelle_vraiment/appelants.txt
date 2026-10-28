@@ -1,0 +1,158 @@
+par texte:
+C:\projetCanvas\canvas>findstr /s /n /c:"Draw(" Kits\Canvas\include\*.* nkcanvas\src\main.cpp
+Kits\Canvas\include\NKCanvas\App\NkCanvasGuiApp.h:67:                           virtual void OnDraw(nkgui::NkGuiDrawList &dl) {
+Kits\Canvas\include\NKCanvas\App\NkCanvasGuiApp.h:192:                                  OnDraw(mGuiContext.dl);
+Kits\Canvas\include\NKCanvas\App\NkCanvasSplash.h:78:           /// void OnDraw(NkGuiDrawList &dl) override {
+Kits\Canvas\include\NKCanvas\Backend\Software\NkSoftwareRenderer2D.h:49:                            void Draw(const NkSprite &sprite) override;
+Kits\Canvas\include\NKCanvas\Core\NKRenderer2D.h:24://     r2d->Draw(sprite);
+Kits\Canvas\include\NKCanvas\Core\NKRenderer2D.h:25://     r2d->Draw(label);
+Kits\Canvas\include\NKCanvas\Renderer\Batch\NkBatchRenderer2D.h:125:                            void Draw(const NkSprite &sprite) override;
+Kits\Canvas\include\NKCanvas\Renderer\Batch\NkBatchRenderer2D.h:126:                            void Draw(const NkText &text) override;
+Kits\Canvas\include\NKCanvas\Renderer\Core\NkDrawable.h:8:// la methode Draw(target, states).
+Kits\Canvas\include\NKCanvas\Renderer\Core\NkDrawable.h:11://   void Draw(NkRenderTarget& target, const NkRenderStates& states) const
+Kits\Canvas\include\NKCanvas\Renderer\Core\NkDrawable.h:14://              concretes (target.Draw(vertices, count, primitive, states))
+Kits\Canvas\include\NKCanvas\Renderer\Core\NkDrawable.h:22://   void NkSprite::Draw(NkRenderTarget& target, const NkRenderStates& states) const {
+Kits\Canvas\include\NKCanvas\Renderer\Core\NkDrawable.h:26://       target.Draw(mVertices, 4, NkPrimitiveType::NK_TRIANGLE_STRIP, local);
+Kits\Canvas\include\NKCanvas\Renderer\Core\NkDrawable.h:30://   L'ancienne interface `NkIDrawable2D` (signature Draw(NkIRenderer2D&)) est
+Kits\Canvas\include\NKCanvas\Renderer\Core\NkDrawable.h:51:                             virtual void Draw(NkRenderTarget &target, const NkRenderStates &states) const = 0;
+Kits\Canvas\include\NKCanvas\Renderer\Core\NkIRenderer2D.h:8://       renderer->Draw(sprite);
+Kits\Canvas\include\NKCanvas\Renderer\Core\NkIRenderer2D.h:9://       renderer->Draw(text);
+Kits\Canvas\include\NKCanvas\Renderer\Core\NkIRenderer2D.h:40:                          virtual void Draw(class NkIRenderer2D &renderer) const = 0;
+Kits\Canvas\include\NKCanvas\Renderer\Core\NkIRenderer2D.h:174:                         virtual void Draw(const NkIDrawable2D &drawable) {
+Kits\Canvas\include\NKCanvas\Renderer\Core\NkIRenderer2D.h:175:                                 drawable.Draw(*this);
+Kits\Canvas\include\NKCanvas\Renderer\Core\NkIRenderer2D.h:179:                         virtual void Draw(const NkSprite &sprite) = 0;
+Kits\Canvas\include\NKCanvas\Renderer\Core\NkIRenderer2D.h:182:                         virtual void Draw(const NkText &text) = 0;
+Kits\Canvas\include\NKCanvas\Renderer\Core\NkRenderer2D.h:28://   r.Draw(sprite);                              // NkDrawable nouveau style
+Kits\Canvas\include\NKCanvas\Renderer\Core\NkRenderer2D.h:29://   r.Draw(spriteOld);                           // NkIDrawable2D compat
+Kits\Canvas\include\NKCanvas\Renderer\Core\NkRenderer2D.h:39://     - Draw(NkDrawable&, NkRenderStates) — nouveau pattern target.Draw
+Kits\Canvas\include\NKCanvas\Renderer\Core\NkRenderer2D.h:191:                          void Draw(const NkDrawable &drawable, const NkRenderStates &states = NkRenderStates::Default()) {
+Kits\Canvas\include\NKCanvas\Renderer\Core\NkRenderer2D.h:193:                                      drawable.Draw(*mTarget, states);
+Kits\Canvas\include\NKCanvas\Renderer\Core\NkRenderer2D.h:198:                          void Draw(const NkIDrawable2D &drawable) {
+Kits\Canvas\include\NKCanvas\Renderer\Core\NkRenderer2D.h:200:                                      mBackend->Draw(drawable);
+Kits\Canvas\include\NKCanvas\Renderer\Core\NkRenderer2D.h:291:                          void Draw(const NkSprite &sprite) {
+Kits\Canvas\include\NKCanvas\Renderer\Core\NkRenderer2D.h:293:                                      mBackend->Draw(sprite);
+Kits\Canvas\include\NKCanvas\Renderer\Core\NkRenderer2D.h:296:                          void Draw(const NkText &text) {
+Kits\Canvas\include\NKCanvas\Renderer\Core\NkRenderer2D.h:298:                                      mBackend->Draw(text);
+Kits\Canvas\include\NKCanvas\Renderer\Core\NkRenderStates.h:18://   target.Draw(va, states);
+Kits\Canvas\include\NKCanvas\Renderer\Core\NkTransformable.h:28://       void Draw(NkRenderTarget& target, NkRenderStates states) const override {
+Kits\Canvas\include\NKCanvas\Renderer\Core\NkTransformable.h:30://           target.Draw(mVertices, states);
+Kits\Canvas\include\NKCanvas\Renderer\Core\NkVertexArray.h:15://   target.Draw(va, states);    // (drawable une fois A.3 livre)
+Kits\Canvas\include\NKCanvas\Renderer\Core\NkVertexArray.h:23://   signature Draw(NkRenderTarget&, NkRenderStates) sont en etape A.3.
+Kits\Canvas\include\NKCanvas\Renderer\Core\NkVertexArray.h:25://   Draw() qui delegue au backend via target.
+Kits\Canvas\include\NKCanvas\Renderer\Resources\NkFont.h:11://   renderer.Draw(label);
+Kits\Canvas\include\NKCanvas\Renderer\Resources\NkMaterial.h:20://   defauts), puis l'attache aux draws via target.Draw(drawable, material.States()).
+Kits\Canvas\include\NKCanvas\Renderer\Resources\NkMaterial.h:28://     est utilise via target.Draw(drawable, mat.States()).
+Kits\Canvas\include\NKCanvas\Renderer\Resources\NkMaterial.h:46://   target.Draw(flameSprite, fireMat.States());
+Kits\Canvas\include\NKCanvas\Renderer\Resources\NkMaterial.h:196:                               /// Retourne un NkRenderStates pret a passer a target.Draw(drawable, mat.States()).
+Kits\Canvas\include\NKCanvas\Renderer\Resources\NkShader.h:58://     target.Draw(sprite, st);
+Kits\Canvas\include\NKCanvas\Renderer\Resources\NkSprite.h:9://      surcharge pour chacune des deux interfaces, `target.Draw(sprite)` etait
+Kits\Canvas\include\NKCanvas\Renderer\Resources\NkSprite.h:16://   3. Leur Draw(target, states) JETAIT l'etat recu : le parametre etait
+Kits\Canvas\include\NKCanvas\Renderer\Resources\NkSprite.h:20:// L'ancienne voie reste ouverte : NkIRenderer2D::Draw(const NkSprite&) prend le
+Kits\Canvas\include\NKCanvas\Renderer\Resources\NkSprite.h:92:                          // appelle par NkIRenderer2D::Draw(sprite).
+Kits\Canvas\include\NKCanvas\Renderer\Resources\NkSprite.h:93:                          void Draw(NkIRenderer2D &renderer) const;
+Kits\Canvas\include\NKCanvas\Renderer\Resources\NkSprite.h:98:                          void Draw(NkRenderTarget &target, const NkRenderStates &states) const override;
+Kits\Canvas\include\NKCanvas\Renderer\Resources\NkSprite.h:177:                         void Draw(NkIRenderer2D &renderer) const;
+Kits\Canvas\include\NKCanvas\Renderer\Resources\NkSprite.h:183:                         void Draw(NkRenderTarget &target, const NkRenderStates &states) const override;
+Kits\Canvas\include\NKCanvas\Renderer\Shapes\NkCircleShape.h:12://   target.Draw(c);
+Kits\Canvas\include\NKCanvas\Renderer\Shapes\NkConvexShape.h:17://   target.Draw(pentagon);
+Kits\Canvas\include\NKCanvas\Renderer\Shapes\NkLineShape.h:11://   target.Draw(ln);
+Kits\Canvas\include\NKCanvas\Renderer\Shapes\NkRectangleShape.h:14://   target.Draw(r);
+Kits\Canvas\include\NKCanvas\Renderer\Shapes\NkShape.h:9://   - de l'heritage NkDrawable (signature Draw(NkRenderTarget&, NkRenderStates))
+Kits\Canvas\include\NKCanvas\Renderer\Shapes\NkShape.h:145:                             void Draw(NkRenderTarget &target, const NkRenderStates &states) const override;
+Kits\Canvas\include\NKCanvas\Renderer\Targets\NkRenderTarget.h:20://     target.Draw(sprite);
+Kits\Canvas\include\NKCanvas\Renderer\Targets\NkRenderTarget.h:26://     target.Draw(va);
+Kits\Canvas\include\NKCanvas\Renderer\Targets\NkRenderTarget.h:32://     - Draw(const NkDrawable&, NkRenderStates) — nouveau pattern
+Kits\Canvas\include\NKCanvas\Renderer\Targets\NkRenderTarget.h:33://     - Draw(const NkIDrawable2D&)              — ancien pattern (delegue au renderer interne)
+Kits\Canvas\include\NKCanvas\Renderer\Targets\NkRenderTarget.h:110:                             /// est responsable de l'appel a target.Draw(vertices, …).
+Kits\Canvas\include\NKCanvas\Renderer\Targets\NkRenderTarget.h:111:                             void Draw(const NkDrawable &drawable, const NkRenderStates &states = NkRenderStates::Default()) {
+Kits\Canvas\include\NKCanvas\Renderer\Targets\NkRenderTarget.h:112:                                 drawable.Draw(*this, states);
+Kits\Canvas\include\NKCanvas\Renderer\Targets\NkRenderTarget.h:116:                             void Draw(const NkVertexArray &va, const NkRenderStates &states = NkRenderStates::Default());
+Kits\Canvas\include\NKCanvas\Renderer\Targets\NkRenderTarget.h:120:                             /// d'entree bas niveau qu'utilisent NkDrawable::Draw().
+Kits\Canvas\include\NKCanvas\Renderer\Targets\NkRenderTarget.h:121:                             virtual void Draw(const NkVertex *vertices, uint32 count, NkPrimitiveType primitive,
+Kits\Canvas\include\NKCanvas\Renderer\Targets\NkRenderTarget.h:126:                             /// Compat : un drawable ancien style (NkIDrawable2D::Draw(NkIRenderer2D&)).
+Kits\Canvas\include\NKCanvas\Renderer\Targets\NkRenderTarget.h:129:                             void Draw(const NkIDrawable2D &drawable);
+Kits\Canvas\include\NKCanvas\Renderer\Targets\NkRenderTarget.h:142:                             /// inclut Draw(NkDrawable&) avec dispatch correct vers *this).
+Kits\Canvas\include\NKCanvas\Renderer\Targets\NkRenderTexture.h:14://       rt.Draw(scene);                          // dessin offscreen
+Kits\Canvas\include\NKCanvas\Renderer\Targets\NkRenderTexture.h:26:// API NkRenderTarget complete supportee : Clear/Display/SetView/Draw(...)
+Kits\Canvas\include\NKCanvas\Renderer\Targets\NkRenderTexture.h:90:                             void Draw(const NkVertex *vertices, uint32 count, NkPrimitiveType primitive,
+Kits\Canvas\include\NKCanvas\Renderer\Targets\NkRenderWindow.h:29://       target.Draw(sprite);
+Kits\Canvas\include\NKCanvas\Renderer\Targets\NkRenderWindow.h:96:                              // (name-hiding C++ : declarer un override de Draw(raw vertices)
+Kits\Canvas\include\NKCanvas\Renderer\Targets\NkRenderWindow.h:100:                             void Draw(const NkVertex *vertices, uint32 count, NkPrimitiveType primitive,
+
+
+par file: ici on utilise le compilateur gbd pour clear
+C:\projetCanvas\canvas>gdb Build\Bin\Debug-Windows\nkcanvas\nkcanvas.exe
+GNU gdb (GDB) 16.3
+Copyright (C) 2024 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+Type "show copying" and "show warranty" for details.
+This GDB was configured as "x86_64-w64-mingw32".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<https://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+    <http://www.gnu.org/software/gdb/documentation/>.
+
+--Type <RET> for more, q to quit, c to continue without paging--(gdb) break Lignes::Draw
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from Build\Bin\Debug-Windows\nkcanvas\nkcanvas.exe...
+(gdb) (gdb) run
+Undefined command: "".  Try "help".
+(gdb) set pagination off
+(gdb) break Lignes::Draw
+Breakpoint 1 at 0x1401f0a07: file C:\projetCanvas\canvas\nkcanvas\src/main.cpp, line 14.
+(gdb) run
+Starting program: C:\projetCanvas\canvas\Build\Bin\Debug-Windows\nkcanvas\nkcanvas.exe 
+[New Thread 20180.0x5244]
+[New Thread 20180.0x1028]
+[New Thread 20180.0x34d4]
+[New Thread 20180.0x1d38]
+[New Thread 20180.0x4434]
+[NKLogger] niveau=info | console=debug | journal=C:\projetCanvas\canvas\logs\app.log
+[NKLogger] trace/debug sont SOUS le niveau : NK_LOG_LEVEL=debug pour les voir ; NK_LOG_CONSOLE=1 pour tout mettre a l'ecran ; NK_LOG_QUIET=1 pour taire ces deux lignes.
+[2026-10-28 09:21:35.758] [INF] [default] [NkCanvasApp.cpp:341 in ResoudreBackend] -> [nkcanvasapp] backend par defaut de la plateforme = DirectX 11
+warning: clientcore\windows\dwm\dwmapi\attribute.cpp(288)\dwmapi.dll!00007FF927FE4F8F: (caller: 00007FF6F1F1DD36) ReturnHr(1) tid(2158) 80070057 Param�tre incorrect.
+[2026-10-28 09:21:36.598] [WRN] [default] [NkContextFactory.cpp:46 in Create] -> [NkContextFactory][DBG] Create begin api=DirectX 11
+[2026-10-28 09:21:36.600] [INF] [default] [NkGpuPolicy.cpp:114 in ApplyPreContext] -> [NkGpuPolicy] api=DirectX 11 pref=Default vendor=Any adapterIndex=-1
+[2026-10-28 09:21:36.600] [WRN] [default] [NkContextFactory.cpp:95 in Create] -> [NkContextFactory][DBG] Context allocated ptr=0x72cfd8
+[2026-10-28 09:21:36.601] [WRN] [default] [NkContextFactory.cpp:97 in Create] -> [NkContextFactory][DBG] Initialize begin
+[New Thread 20180.0x4adc]
+[New Thread 20180.0x3350]
+[Thread 20180.0x3350 exited with code 0]
+[New Thread 20180.0x1610]
+[New Thread 20180.0x1304]
+[New Thread 20180.0x3944]
+[New Thread 20180.0x4ef8]
+[New Thread 20180.0x39a0]
+[New Thread 20180.0x490]
+[New Thread 20180.0x2500]
+[2026-10-28 09:21:38.919] [INF] [default] [NkDX11Context.cpp:208 in CreateDeviceAndSwapchain] -> [NkDX11] D3D11CreateDevice OK with 11_1+ (chosen FL=0xB000)
+
+[2026-10-28 09:21:38.919] [INF] [default] [NkDX11Context.cpp:242 in CreateDeviceAndSwapchain] -> [NkDX11] Using adapter #0 vendor=0x10DE device=0x139A
+
+[2026-10-28 09:21:39.830] [INF] [default] [NkDX11Context.cpp:269 in CreateDeviceAndSwapchain] -> [NkDX11] Device+Swapchain OK (feature level B000, VRAM 4055 MB)
+
+[2026-10-28 09:21:39.832] [INF] [default] [NkDX11Context.cpp:144 in Initialize] -> [NkDX11] Ready a?" DirectX 11 | VRAM 4055 MB
+
+[2026-10-28 09:21:39.833] [WRN] [default] [NkContextFactory.cpp:103 in Create] -> [NkContextFactory][DBG] Initialize success
+[2026-10-28 09:21:39.833] [INF] [default] [NkContextFactory.cpp:105 in Create] -> [NkContextFactory] Context created: DirectX 11
+
+[2026-10-28 09:21:39.833] [INF] [default] [NkRenderer2DFactory.cpp:39 in Create] -> [NkRenderer2DFactory] Creating 2D renderer for API: DirectX 11
+[New Thread 20180.0x5018]
+[New Thread 20180.0x1f24]
+[New Thread 20180.0x1120]
+[New Thread 20180.0x27e8]
+[2026-10-28 09:21:39.924] [INF] [default] [NkDX11Renderer2D.cpp:317 in Initialize] -> [NkDX11-2D] Initialized
+[2026-10-28 09:21:39.925] [INF] [default] [NkRenderer2DFactory.cpp:103 in Create] -> [NkRenderer2DFactory] 2D renderer created: DirectX 11
+[2026-10-28 09:21:39.925] [INF] [default] [NkCanvasApp.cpp:423 in CreateWindowAndTarget] -> [nkcanvasapp] Exercice 5 chap 7 - backend graphique retenu = DirectX 11
+
+Thread 1 hit Breakpoint 1, Lignes::Draw (this=0x5ffcb0, target=..., states=...)
+    at C:\projetCanvas\canvas\nkcanvas\src/main.cpp:14
+warning: Source file is more recent than executable.
+14              auto makeVk = [&] (nkentseu::float32 x, nkentseu::float32 y) {
+(gdb) bt
+
+la differences entre pile et texte est que par texte ici recupère tous les lignes ayant le mot draw dans tout l'environnement alors que par pile ici recupère les lignes qui appelle draw ainsi que meme la definition
