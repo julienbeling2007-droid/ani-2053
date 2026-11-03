@@ -1,0 +1,52 @@
+Strategie: fichier : nkaudio.h:423,424
+ligne concerne: namespace nkentseu {
+	namespace audio {
+
+fabrique:nktimezone.h:79 
+ligne concernée: NKTIME_NODISCARD static NkTimeZone GetLocal() noexcept;
+
+facade: nkrenderer2d.h:58 
+ligne concernée: class NkRenderer2D
+
+patron de methode: nkfuture.h: 67
+ligne concerne: template <typename T> class NkPromise;
+
+observateur:nkfilewatcher:353
+ligne concernée: class MonObservateur : public nkentseu::NkFileWatcherCallback
+
+singleton: nkregistry.h:27
+ligne concernée: static NkRegistry &Instance();
+
+
+adaptateur: nkstladaptater.h:92
+ligne concernée: * @brief Adaptateur template pour utiliser un NkAllocator avec les conteneurs STL
+
+composite: nkdistributingsink.h:57
+ligne concernée:  * @brief Sink composite qui distribue les messages à plusieurs sous-sinks
+
+commande:ils manquent dans nklatex 
+ce qui s'en rapproche:inline uint32 NkGuiEnumererCommandes(const NkArchive &doc, const NkActionNommee *actions,
+											 uint32 nActions, NkGuiCommandeDite *out, uint32 max,
+											 NkGuiCommandesRapport &rap) noexcept {
+			rap = NkGuiCommandesRapport();
+			uint32 n = 0u;
+			if (!out || max == 0u || !actions || nActions == 0u)
+				return 0u;
+			const NkArchiveNode *corps = NkGMonteCorps(doc);
+			if (!corps)
+				return 0u;
+			// Les sections de premier niveau (`widgets "menu"`, `widgets "panneau"`…)
+			// puis, sous chacune, l'arbre entier.
+			for (uint32 i = 0; i < (uint32)corps->array.Size(); ++i) {
+				if (!corps->array[i].IsObject() || !corps->array[i].object)
+					continue;
+				const NkArchive &sec = *corps->array[i].object;
+				if (!NkGMotEgal(NkGuiArchive::TypeOf(sec), "widgets"))
+					continue;
+				detail::NkGuiParcourirCommandes(sec, actions, nActions, out, max, n, rap);
+			}
+			return n;
+		}
+
+	} // namespace nkgui
+} // namespace nkentseu
