@@ -1,0 +1,6 @@
+methode: HalfSize, promesses:2 dans les parametres de la fonction et devant la fonction pour static
+methode:Contains, promesses:3 dans les parametres de la fonction qui sont 2 et 1 devant la fonction pour static
+methode:Corners, promesses:2 dans les paramètes de la fonction et 1 devant la fonction qui est static
+methode: PixelToWorld, promesses:3  dans les parametres de la fonction et 1 derriere la fonction qui est const final
+methode:  GridSpacing, promesses:1 un const final
+
