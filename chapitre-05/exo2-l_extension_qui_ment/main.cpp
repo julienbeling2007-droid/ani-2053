@@ -18,8 +18,8 @@ int main(){
         std::cin>>taille;
         int position=nom.find_last_of('.');// recupère la position du dernier . du caractère
         std::string extension="";
-        if(position!=std::string::npos){
-            extension=nom.substr(position+1);
+        if(position!=std::string::npos){ // verifie si le point est bien present à cet position
+            extension=nom.substr(position+1); // recupération des caractères après le point
         }
         if(taille<4){
             std::cout<<nom<<"refusé"<<std::endl;    
