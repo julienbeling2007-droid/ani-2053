@@ -1,0 +1,45 @@
+la promesse la plus forte ici est: const &t
+message du compilateur: 
+1) avant l'ajout de vue.PanByPixels(1.0f, 0.0f)
+E:\Nkentseu\Applications\MonEssai>g++ -std=c++17 -I "E:/Nkentseu/kernel/Foundation/NKMath/src" -I "E:/Nkentseu/kernel/Foundation/NKCore/src" -I "E:/Nkentseu/kernel/Foundation/NKPlatform/src" -I "E:/Nkentseu/kernel/Foundation/NKContainers/src" -I "E:/Nkentseu/kernel/Foundation/NKMemory/src" -I "E:/Nkentseu/Applications/NkRef/src" main.cpp -o main.exe
+In file included from E:/Nkentseu/kernel/Foundation/NKMath/src/NKMath/NKMath.h:47,
+                 from E:/Nkentseu/Applications/NkRef/src/NkRef/NkRefView.h:16,
+                 from main.cpp:2:
+E:/Nkentseu/kernel/Foundation/NKMath/src/NKMath/NkAngle.h:472:93: warning: friend declaration 'nkentseu::NkString nkentseu::math::ToString(const NkAngleT<Precision>&)' declares a non-template function [-Wnon-template-friend]
+  472 |                                 friend NKENTSEU_MATH_API NkString ToString(const NkAngleT &a);
+      |                                                                                             ^
+E:/Nkentseu/kernel/Foundation/NKMath/src/NKMath/NkAngle.h:472:93: note: (if this is not what you intended, make sure the function template has already been declared and add '<>' after the function name here)
+E:/Nkentseu/kernel/Foundation/NKMath/src/NKMath/NkAngle.h:482:118: warning: friend declaration 'std::ostream& nkentseu::math::operator<<(std::ostream&, const NkAngleT<Precision>&)' declares a non-template function [-Wnon-template-friend]
+  482 |                                 friend NKENTSEU_MATH_API std::ostream &operator<<(std::ostream &os, const NkAngleT &a);
+      |                                                                                                                      ^
+In file included from E:/Nkentseu/kernel/Foundation/NKMath/src/NKMath/NKMath.h:103:
+E:/Nkentseu/kernel/Foundation/NKMath/src/NKMath/NkQuat.h:255:97: warning: friend declaration 'nkentseu::math::NkQuatT<T> nkentseu::math::operator^(const NkQuatT<T>&, T)' declares a non-template function [-Wnon-template-friend]
+  255 |                                 friend NkQuatT operator^(const NkQuatT &quaternion, T exponent) noexcept;
+      |                                                                                                 ^~~~~~~~
+
+2) apres l'ajout de vue.PanByPixels(1.0f, 0.0f)
+
+E:\Nkentseu\Applications\MonEssai>g++ -std=c++17 -I "E:/Nkentseu/kernel/Foundation/NKMath/src" -I "E:/Nkentseu/kernel/Foundation/NKCore/src" -I "E:/Nkentseu/kernel/Foundation/NKPlatform/src" -I "E:/Nkentseu/kernel/Foundation/NKContainers/src" -I "E:/Nkentseu/kernel/Foundation/NKMemory/src" -I "E:/Nkentseu/Applications/NkRef/src" main.cpp -o main.exe
+In file included from E:/Nkentseu/kernel/Foundation/NKMath/src/NKMath/NKMath.h:47,
+                 from E:/Nkentseu/Applications/NkRef/src/NkRef/NkRefView.h:16,
+                 from main.cpp:2:
+E:/Nkentseu/kernel/Foundation/NKMath/src/NKMath/NkAngle.h:472:93: warning: friend declaration 'nkentseu::NkString nkentseu::math::ToString(const NkAngleT<Precision>&)' declares a non-template function [-Wnon-template-friend]
+  472 |                                 friend NKENTSEU_MATH_API NkString ToString(const NkAngleT &a);
+      |                                                                                             ^
+E:/Nkentseu/kernel/Foundation/NKMath/src/NKMath/NkAngle.h:472:93: note: (if this is not what you intended, make sure the function template has already been declared and add '<>' after the function name here)
+E:/Nkentseu/kernel/Foundation/NKMath/src/NKMath/NkAngle.h:482:118: warning: friend declaration 'std::ostream& nkentseu::math::operator<<(std::ostream&, const NkAngleT<Precision>&)' declares a non-template function [-Wnon-template-friend]
+  482 |                                 friend NKENTSEU_MATH_API std::ostream &operator<<(std::ostream &os, const NkAngleT &a);
+      |                                                                                                                      ^
+In file included from E:/Nkentseu/kernel/Foundation/NKMath/src/NKMath/NKMath.h:103:
+E:/Nkentseu/kernel/Foundation/NKMath/src/NKMath/NkQuat.h:255:97: warning: friend declaration 'nkentseu::math::NkQuatT<T> nkentseu::math::operator^(const NkQuatT<T>&, T)' declares a non-template function [-Wnon-template-friend]
+  255 |                                 friend NkQuatT operator^(const NkQuatT &quaternion, T exponent) noexcept;
+      |                                                                                                 ^~~~~~~~
+main.cpp: In function 'int main()':
+main.cpp:23:21: error: passing 'const nkref::NkRefView' as 'this' argument discards qualifiers [-fpermissive]
+   23 |      vue.PanByPixels(1.0f, 0.0f);
+      |      ~~~~~~~~~~~~~~~^~~~~~~~~~~~
+E:/Nkentseu/Applications/NkRef/src/NkRef/NkRefView.h:45:30: note:   in call to 'void nkref::NkRefView::PanByPixels(nkentseu::float32, nkentseu::float32)'
+   45 |                         void PanByPixels(float32 dxPixels, float32 dyPixels) {
+      |                              ^~~~~~~~~~~
+
+promesse que la signature ne dit pas: noexcept
