@@ -50,8 +50,7 @@ int main() {
             double demiHauteur =
                 images[i].hauteur * images[i].echelle / 2.0;
 
-            if (abs(px - images[i].x) <= demiLargeur &&
-                abs(py - images[i].y) <= demiHauteur) {
+            if (abs(px - images[i].x) <= demiLargeur && abs(py - images[i].y) <= demiHauteur) {
 
                 A = images[i].nom;
                 break;
