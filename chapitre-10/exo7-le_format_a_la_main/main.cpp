@@ -143,9 +143,7 @@ int main() {
     // Lire la vue
     float cx, cy, zoom;
 
-    if (!lireF32(data, position, cx) ||
-        !lireF32(data, position, cy) ||
-        !lireF32(data, position, zoom)) {
+    if (!lireF32(data, position, cx) ||!lireF32(data, position, cy) ||!lireF32(data, position, zoom)) {
 
         cout << "TRONQUE\n";
         return 0;
@@ -154,10 +152,7 @@ int main() {
     // Lire le thème et la grille
     uint8_t theme, grille, ignore;
 
-    if (!lireU8(data, position, theme) ||
-        !lireU8(data, position, grille) ||
-        !lireU8(data, position, ignore) ||
-        !lireU8(data, position, ignore)) {
+    if (!lireU8(data, position, theme) ||!lireU8(data, position, grille) ||!lireU8(data, position, ignore) ||!lireU8(data, position, ignore)) {
 
         cout << "TRONQUE\n";
         return 0;
@@ -178,18 +173,7 @@ int main() {
         Image image;
         uint8_t miroirX, miroirY;
 
-        if (!lireF32(data, position, image.x) ||
-            !lireF32(data, position, image.y) ||
-            !lireF32(data, position, image.echelle) ||
-            !lireF32(data, position, image.rotation) ||
-            !lireF32(data, position, image.opacite) ||
-            !lireU8(data, position, miroirX) ||
-            !lireU8(data, position, miroirY) ||
-            !lireU8(data, position, ignore) ||
-            !lireU8(data, position, ignore) ||
-            !lireU32(data, position, image.largeur) ||
-            !lireU32(data, position, image.hauteur) ||
-            !lireU32(data, position, image.taille)) {
+        if (!lireF32(data, position, image.x) ||!lireF32(data, position, image.y) ||!lireF32(data, position, image.echelle) ||!lireF32(data, position, image.rotation) ||!lireF32(data, position, image.opacite) ||!lireU8(data, position, miroirX) ||!lireU8(data, position, miroirY) ||!lireU8(data, position, ignore) ||!lireU8(data, position, ignore) ||!lireU32(data, position, image.largeur) ||!lireU32(data, position, image.hauteur) ||!lireU32(data, position, image.taille)) {
 
             cout << "TRONQUE\n";
             return 0;
@@ -222,12 +206,7 @@ int main() {
         Trait trait;
         uint32_t nombrePoints;
 
-        if (!lireU8(data, position, trait.r) ||
-            !lireU8(data, position, trait.g) ||
-            !lireU8(data, position, trait.b) ||
-            !lireU8(data, position, trait.a) ||
-            !lireF32(data, position, trait.epaisseur) ||
-            !lireU32(data, position, nombrePoints)) {
+        if (!lireU8(data, position, trait.r) ||!lireU8(data, position, trait.g) ||!lireU8(data, position, trait.b) ||!lireU8(data, position, trait.a) ||!lireF32(data, position, trait.epaisseur) ||!lireU32(data, position, nombrePoints)) {
 
             cout << "TRONQUE\n";
             return 0;
@@ -237,8 +216,7 @@ int main() {
         for (uint32_t j = 0; j < nombrePoints; j++) {
             Point point;
 
-            if (!lireF32(data, position, point.x) ||
-                !lireF32(data, position, point.y)) {
+            if (!lireF32(data, position, point.x) ||!lireF32(data, position, point.y)) {
 
                 cout << "TRONQUE\n";
                 return 0;
