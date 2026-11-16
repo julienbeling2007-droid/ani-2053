@@ -1,0 +1,55 @@
+fichier: main.cpp, lignes: 1977 
+include: 
+#include "NKWindow/NKWindow.h"
+#include "NKWindow/NKMain.h"
+#include "NKEvent/NkEvent.h"
+#include "NKEvent/NkWindowEvent.h"
+#include "NKEvent/NkMouseEvent.h"
+#include "NKEvent/NkKeyboardEvent.h"
+#include "NKEvent/NkDropEvent.h"
+#include "NKLogger/NkLog.h"
+#include "NKTime/NkTime.h"
+
+#include "NKCanvas/Renderer/Targets/NkRenderWindow.h"
+#include "NKCanvas/Core/NkContextDesc.h"
+#include "NKCanvas/Core/NkGraphicsApi.h"
+#include "NKCanvas/Renderer/Resources/NkTexture.h"
+#include "NKCanvas/Renderer/Resources/NkSprite.h" 
+#include "NKCanvas/Renderer/Resources/NkFont.h"
+#include "NKFileSystem/NkDirectory.h"
+#include "NKFileSystem/NkFile.h"
+#include "NKImage/NKImage.h"
+#include <windows.h>
+#include "NKGui/NKGui.h"
+#include "NKCanvas/UI/NkGuiCanvasBackend.h"
+#include "NKMemory/NkUniquePtr.h"
+#include "NKTime/NkClock.h"
+
+#include "NKWindow/Core/NkDialogs.h" 
+#include "NKCore/NkTraits.h"         
+#include "NkRef/NkRefView.h"
+#include "NkRef/NkRefBoard.h"
+#include "NkRef/NkRefFile.h"
+
+#include <cstdio>  
+#include <cstdlib> 
+#include <cstring> 
+
+fichier: NkRefBoard, lignes: 371
+include: 
+#include "NKMath/NKMath.h"
+#include "NKContainers/Sequential/NkVector.h"
+#include "NKContainers/String/NkString.h"
+
+fichier: NkRefFile.h, lignes: 224
+include:
+#include "NKContainers/Sequential/NkVector.h"
+#include "NkRef/NkRefBoard.h"
+#include "NkRef/NkRefView.h"
+
+fichier : NkRefView.h, lignes: 86
+include:
+#include "NKMath/NKMath.h"
+
+commit: 6fb634fc
+commande utilisé: git log -1 --format=%h

@@ -1,0 +1,7 @@
+possession de chaque fichier: main.cpp: GLUE fenêtre + boucle + entrées + rendu
+NkRefBoard.h: le MODÈLE de la planche de références, PUR (aucune dépendance
+rendu).
+NkRefFile.h: le fichier .nkref : la planche ENTIÈRE dans un seul fichier
+NkRefView.h: la caméra 2D du canevas infini, PURE (aucune dépendance rendu)
+Part des fichiers pures: le nombre total de ligne de NkRef est de 2658 et le nombre de ligne purs: 681 donc la part est de: (681/2658)*100=25.62%
+les fichiers que je garderai: NkRefView.h, NkRefBoard.h car les 2 non aucune dependance lié à la fenetre et aux entrées
